@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+        #course-list button {
+           width: 100px;
+           height: 100px;
+           border-radius: 6px;
+           border: 1px solid transparent;
+           text-transform: uppercase;
+           color: blue;
+           background: orange;
+           font-weight: 700;
+        }
+
+        #course-list a {
+            text-decoration: none;
+            color: blue;
+            font-weight: 700;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function Button({ title, href, onClick }) {
+        let Component = "button";
+
+        const props = {};
+
+        if (href) {
+          Component = "a";
+          props.href = href;
+        }
+
+        if (onClick) {
+          props.onClick = onClick;
+        }
+
+        return <Component {...props}>{title}</Component>;
+      }
+
+      function App() {
+        return (
+          <div id="course-list">
+            <Button
+              title="Click me"
+              href="https://fullstack.edu.vn"
+              onClick={() => console.log(Math.random())}
+            />
+          </div>
+        );
+      }
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

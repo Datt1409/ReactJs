@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX, Component, Props</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- JSX -> Javascript XML (hỗ trợ viết Html trong javascript)
+    
+
+    -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+      //   const ul = React.createElement(
+      //     "ul",
+      //     null,
+      //     React.createElement("li", null, "Javascript"),
+      //     React.createElement("li", null, "ReactJS")
+      //   );
+
+      const courses = [
+        {
+          name: "html, css",
+        },
+        {
+          name: "Javascript",
+        },
+        {
+          name: "Responsive web design",
+        },
+      ];
+
+      // cach 1
+      //   const ul = (
+      //     <ul>
+      //       <li>{courses[0].name}</li>
+      //       <li>{courses[1].name}</li>
+      //       <li>{courses[2].name}</li>
+      //     </ul>
+      //   );
+
+      // cach 2
+      // const ul = (
+      //   <ul>
+      //     {courses.map((course, index) => (
+      //       <li key={index}>{course.name}</li>
+      //     ))}
+      //   </ul>
+      // );
+
+      const jsx =
+        // <React.Fragment>
+        //   <h1>Heading 1</h1>;<h2>Heading 2</h2>;
+        // </React.Fragment>
+
+        React.createElement(
+          React.Fragment,
+          null,
+          React.createElement("h1", null, "heading 1"),
+          React.createElement("h2", null, "heading 2")
+        );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(jsx);
+    </script>
+  </body>
+</html>

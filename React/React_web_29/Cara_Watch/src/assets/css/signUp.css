@@ -1,0 +1,54 @@
+#news-letter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ecebea;
+}
+
+#news-letter h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #161a21;
+}
+
+#news-letter p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #161a21;
+}
+
+#news-letter p span {
+  color: red;
+}
+
+#news-letter .form {
+  display: flex;
+  width: 40%;
+}
+
+#news-letter input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#news-letter button {
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #161a21;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 40%;
+  background-color: #161a21;
+  color: #fff;
+  white-space: nowrap;
+  height: 3.125rem;
+}

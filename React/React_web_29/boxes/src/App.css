@@ -1,0 +1,9 @@
+.app {
+    width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.total {
+    font-weight: bold;
+}

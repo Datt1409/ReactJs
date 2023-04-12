@@ -1,0 +1,103 @@
+#banner {
+  background-image: url(../images/banner.png);
+  height: 90vh;
+  width: 100%;
+  background-position: top 25% right 0;
+  background-size: cover;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#banner h4 {
+  color: #fff;
+  text-align: center;
+}
+
+#banner h2 {
+  color: #fff;
+  margin: 15px 0 15px 0;
+  font-size: 40x;
+  font-weight: 600;
+}
+
+#banner button {
+  background-image: url(../images/button.png);
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#category {
+  padding-top: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  display: grid;
+}
+
+#category .category-card {
+  width: 370px;
+  height: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+}
+
+#category .first {
+  background-image: url(../images/Category/men_watch.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+#category .second {
+  background-image: url(../images/Category/women_watch.png);
+  background-size: cover;
+  background-position: center center;
+}
+#category .third {
+  background-image: url(../images/Category/accessories.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+#category .category-card .right-icon {
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 13px;
+  font-size: 12px;
+}
+
+/* Category start */
+
+#category .category-card:hover .right-icon {
+  background-color: #fff;
+  color: #000;
+  transition: all ease 0.2s;
+}
+
+#category .category-card img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#category .category-card h3 {
+  padding: 9px 8px 6px 15px;
+  line-height: 1;
+  color: #fff;
+  font-size: 23px;
+  text-transform: uppercase;
+}

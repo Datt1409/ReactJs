@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReactJs</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Add React to Website</h1>
+    <!-- 
+        1. Github, NpmJs, Unpkg
+        2. Add react to website
+        3. Official docs
+     -->
+
+    <!-- 
+        1. Tại sao phải sử dụng ReactDom ?
+        - Để có thể render được React element ra trình duyệt
+        - ReactDom là 1 thư viện, cầu nối giữa React và Dom, giúp React tạo ra được React element và 
+        dùng element đó render vào Dom
+
+        2. Tại sao lại tách React-Dom ra ?
+
+        3. render UI ?
+
+
+      -->
+    <div id="root"></div>
+    <script>
+      // React
+      const postItem = React.createElement(
+        "div",
+        {
+          className: "post-item",
+        },
+        React.createElement(
+          "h2",
+          { title: "Học React tại f8" },
+          "Học ReactJs tại F8"
+        ),
+        React.createElement("p", null, "Học ReactJs từ cơ bản tới nâng cao")
+      );
+
+      //  Get root element
+      const container = document.getElementById("root");
+      //   React Dom @18 -> Render Ui
+      const root = ReactDOM.createRoot(container);
+      root.render(postItem);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+
+    * Hooks
+    8. React element types: string, function/class
+    - Wrapper
+        - Header -> Header component
+        - Content -> Content component
+        - Footer -> footer component
+
+    - Biểu diễn đơn giản với JSX
+     -->
+
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      //   function Header() {
+      //     return <div className="header"> Header</div>;
+      //   }
+
+      //   //   function Content() {
+      //   //     return <div className="content">Content</div>;
+      //   //   }
+
+      //   //    Cú pháp Class component
+
+      //   class Content extends React.Component {
+      //     render() {
+      //       return <div className="content">New Content</div>;
+      //     }
+      //   }
+
+      //   function Footer() {
+      //     return <div className="footer">Footer</div>;
+      //   }
+
+      //   const app = (
+      //     <div className="wrapper">
+      //       <Header />
+      //       <Content />
+      //       <Footer />
+      //     </div>
+      //   );
+      //   console.log(app);
+
+      function PostItem() {
+        return (
+          <div className="post-item">
+            <img
+              src="https://files.fullstack.edu.vn/f8-prod/blog_posts/677/615436b218d0a.png"
+              alt=""
+            />
+            <h2 className="post-title">
+              Cách đưa code lên GitHub và tạo GitHub Pages
+            </h2>
+            <p className="post-publish">4 phút trước</p>
+          </div>
+        );
+      }
+
+      const app = (
+        <div className="post-list">
+          <PostItem />
+          <PostItem />
+          <PostItem />
+        </div>
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      root.render(app);
+    </script>
+  </body>
+</html>
